@@ -4,13 +4,13 @@ project(LinearAlgebra)
 set(CMAKE_CXX_STANDARD 23)
 
 add_library(LinearAlgebra SHARED library.cpp
-        LinearAlgebra.cpp
-        LinearAlgebra.h
+        RealLinear.cpp
+        RealLinear.h
         main.cpp
         VectorSpaceTest.cpp
         VectorSpaceTest.h
-        LinearAlgebraErrors.cpp
-        LinearAlgebraErrors.h
+        RealLinearErrors.cpp
+        RealLinearErrors.h
 )
 
 add_executable(main.cpp

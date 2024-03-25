@@ -2,8 +2,8 @@
 // Created by Joshua Cidron on 1/30/24.
 //
 
-#ifndef LINEARALGEBRA_LINEARALGEBRA_H
-#define LINEARALGEBRA_LINEARALGEBRA_H
+#ifndef LINEARALGEBRA_REALLINEAR_H
+#define LINEARALGEBRA_REALLINEAR_H
 
 #include <vector>
 
@@ -40,4 +40,4 @@ class LinearAlgebra::Matrix{
         double contents[rows][columns];
 };
 
-#endif //LINEARALGEBRA_LINEARALGEBRA_H
+#endif //LINEARALGEBRA_REALLINEAR_H
