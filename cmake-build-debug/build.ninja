@@ -41,75 +41,54 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/joshuacidron/Desktop/LinearAlgebra/cmake-build-debug/
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target LinearAlgebra
+# Object build statements for STATIC_LIBRARY target RealLinear.cpp
 
 
 #############################################
-# Order-only phony target for LinearAlgebra
+# Order-only phony target for RealLinear.cpp
 
-build cmake_object_order_depends_target_LinearAlgebra: phony || CMakeFiles/LinearAlgebra.dir
+build cmake_object_order_depends_target_RealLinear.cpp: phony || CMakeFiles/RealLinear.cpp.dir
 
-build CMakeFiles/LinearAlgebra.dir/library.cpp.o: CXX_COMPILER__LinearAlgebra_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/library.cpp || cmake_object_order_depends_target_LinearAlgebra
-  DEFINES = -DLinearAlgebra_EXPORTS
-  DEP_FILE = CMakeFiles/LinearAlgebra.dir/library.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fPIC -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LinearAlgebra.dir
-  OBJECT_FILE_DIR = CMakeFiles/LinearAlgebra.dir
+build CMakeFiles/RealLinear.cpp.dir/RealLinear/Tests/VectorTests.cpp.o: CXX_COMPILER__RealLinear.2ecpp_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/RealLinear/Tests/VectorTests.cpp || cmake_object_order_depends_target_RealLinear.cpp
+  DEP_FILE = CMakeFiles/RealLinear.cpp.dir/RealLinear/Tests/VectorTests.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/RealLinear.cpp.dir/RealLinear/Tests
 
-build CMakeFiles/LinearAlgebra.dir/RealLinear.cpp.o: CXX_COMPILER__LinearAlgebra_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/RealLinear.cpp || cmake_object_order_depends_target_LinearAlgebra
-  DEFINES = -DLinearAlgebra_EXPORTS
-  DEP_FILE = CMakeFiles/LinearAlgebra.dir/RealLinear.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fPIC -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LinearAlgebra.dir
-  OBJECT_FILE_DIR = CMakeFiles/LinearAlgebra.dir
+build CMakeFiles/RealLinear.cpp.dir/RealLinear/Vector/Vector.cpp.o: CXX_COMPILER__RealLinear.2ecpp_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/RealLinear/Vector/Vector.cpp || cmake_object_order_depends_target_RealLinear.cpp
+  DEP_FILE = CMakeFiles/RealLinear.cpp.dir/RealLinear/Vector/Vector.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/RealLinear.cpp.dir/RealLinear/Vector
 
-build CMakeFiles/LinearAlgebra.dir/main.cpp.o: CXX_COMPILER__LinearAlgebra_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/main.cpp || cmake_object_order_depends_target_LinearAlgebra
-  DEFINES = -DLinearAlgebra_EXPORTS
-  DEP_FILE = CMakeFiles/LinearAlgebra.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fPIC -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LinearAlgebra.dir
-  OBJECT_FILE_DIR = CMakeFiles/LinearAlgebra.dir
+build CMakeFiles/RealLinear.cpp.dir/RealLinear/Errors/RealLinearErrors.cpp.o: CXX_COMPILER__RealLinear.2ecpp_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/RealLinear/Errors/RealLinearErrors.cpp || cmake_object_order_depends_target_RealLinear.cpp
+  DEP_FILE = CMakeFiles/RealLinear.cpp.dir/RealLinear/Errors/RealLinearErrors.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/RealLinear.cpp.dir/RealLinear/Errors
 
-build CMakeFiles/LinearAlgebra.dir/VectorSpaceTest.cpp.o: CXX_COMPILER__LinearAlgebra_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/VectorSpaceTest.cpp || cmake_object_order_depends_target_LinearAlgebra
-  DEFINES = -DLinearAlgebra_EXPORTS
-  DEP_FILE = CMakeFiles/LinearAlgebra.dir/VectorSpaceTest.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fPIC -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LinearAlgebra.dir
-  OBJECT_FILE_DIR = CMakeFiles/LinearAlgebra.dir
-
-build CMakeFiles/LinearAlgebra.dir/RealLinearErrors.cpp.o: CXX_COMPILER__LinearAlgebra_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/RealLinearErrors.cpp || cmake_object_order_depends_target_LinearAlgebra
-  DEFINES = -DLinearAlgebra_EXPORTS
-  DEP_FILE = CMakeFiles/LinearAlgebra.dir/RealLinearErrors.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fPIC -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LinearAlgebra.dir
-  OBJECT_FILE_DIR = CMakeFiles/LinearAlgebra.dir
-
-build CMakeFiles/LinearAlgebra.dir/RealLinearVector.cpp.o: CXX_COMPILER__LinearAlgebra_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/cmake-build-debug/RealLinearVector.cpp || cmake_object_order_depends_target_LinearAlgebra
-  DEFINES = -DLinearAlgebra_EXPORTS
-  DEP_FILE = CMakeFiles/LinearAlgebra.dir/RealLinearVector.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fPIC -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/LinearAlgebra.dir
-  OBJECT_FILE_DIR = CMakeFiles/LinearAlgebra.dir
+build CMakeFiles/RealLinear.cpp.dir/main.cpp.o: CXX_COMPILER__RealLinear.2ecpp_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/main.cpp || cmake_object_order_depends_target_RealLinear.cpp
+  DEP_FILE = CMakeFiles/RealLinear.cpp.dir/main.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/RealLinear.cpp.dir
 
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target LinearAlgebra
+# Link build statements for STATIC_LIBRARY target RealLinear.cpp
 
 
 #############################################
-# Link the shared library libLinearAlgebra.dylib
+# Link the static library libRealLinear.cpp.a
 
-build libLinearAlgebra.dylib: CXX_SHARED_LIBRARY_LINKER__LinearAlgebra_Debug CMakeFiles/LinearAlgebra.dir/library.cpp.o CMakeFiles/LinearAlgebra.dir/RealLinear.cpp.o CMakeFiles/LinearAlgebra.dir/main.cpp.o CMakeFiles/LinearAlgebra.dir/VectorSpaceTest.cpp.o CMakeFiles/LinearAlgebra.dir/RealLinearErrors.cpp.o CMakeFiles/LinearAlgebra.dir/RealLinearVector.cpp.o
+build libRealLinear.cpp.a: CXX_STATIC_LIBRARY_LINKER__RealLinear.2ecpp_Debug CMakeFiles/RealLinear.cpp.dir/RealLinear/Tests/VectorTests.cpp.o CMakeFiles/RealLinear.cpp.dir/RealLinear/Vector/Vector.cpp.o CMakeFiles/RealLinear.cpp.dir/RealLinear/Errors/RealLinearErrors.cpp.o CMakeFiles/RealLinear.cpp.dir/main.cpp.o
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0
-  INSTALLNAME_DIR = @rpath/
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = CMakeFiles/LinearAlgebra.dir
+  OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
   POST_BUILD = :
   PRE_LINK = :
-  SONAME = libLinearAlgebra.dylib
-  SONAME_FLAG = -install_name
-  TARGET_FILE = libLinearAlgebra.dylib
-  TARGET_PDB = LinearAlgebra.dylib.dbg
+  TARGET_FILE = libRealLinear.cpp.a
+  TARGET_PDB = RealLinear.cpp.a.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target main.cpp
@@ -168,7 +147,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build LinearAlgebra: phony libLinearAlgebra.dylib
+build RealLinear.cpp: phony libRealLinear.cpp.a
 
 # =============================================================================
 # Folder targets.
@@ -178,7 +157,7 @@ build LinearAlgebra: phony libLinearAlgebra.dylib
 #############################################
 # Folder: /Users/joshuacidron/Desktop/LinearAlgebra/cmake-build-debug
 
-build all: phony libLinearAlgebra.dylib main.cpp
+build all: phony libRealLinear.cpp.a main.cpp
 
 # =============================================================================
 # Built-in targets
