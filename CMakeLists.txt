@@ -11,8 +11,10 @@ add_library(
         RealLinear/Errors/RealLinearErrors.cpp
         RealLinear/Errors/RealLinearErrors.h
         main.cpp
+        RealLinear/Matrix/Matrix.cpp
 )
 
 add_executable(main.cpp
         main.cpp
+        RealLinear/Matrix/Matrix.cpp
 )

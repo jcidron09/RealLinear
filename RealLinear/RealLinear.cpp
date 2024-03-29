@@ -4,11 +4,11 @@
 #include <utility>
 #include <vector>
 #include <cmath>
-#include "RealLinear.h"
 #include "Errors/RealLinearErrors.cpp"
 #include "Vector/Vector.cpp"
 namespace RealLinear{
     class Vector;
+    class Matrix;
     double norm(const Vector&);
     double norm(const Vector&, int);
     double dot_product(Vector, Vector);

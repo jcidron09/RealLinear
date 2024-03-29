@@ -73,6 +73,12 @@ build CMakeFiles/RealLinear.cpp.dir/main.cpp.o: CXX_COMPILER__RealLinear.2ecpp_u
   OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/RealLinear.cpp.dir
 
+build CMakeFiles/RealLinear.cpp.dir/RealLinear/Matrix/Matrix.cpp.o: CXX_COMPILER__RealLinear.2ecpp_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/RealLinear/Matrix/Matrix.cpp || cmake_object_order_depends_target_RealLinear.cpp
+  DEP_FILE = CMakeFiles/RealLinear.cpp.dir/RealLinear/Matrix/Matrix.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/RealLinear.cpp.dir/RealLinear/Matrix
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target RealLinear.cpp
@@ -81,7 +87,7 @@ build CMakeFiles/RealLinear.cpp.dir/main.cpp.o: CXX_COMPILER__RealLinear.2ecpp_u
 #############################################
 # Link the static library libRealLinear.cpp.a
 
-build libRealLinear.cpp.a: CXX_STATIC_LIBRARY_LINKER__RealLinear.2ecpp_Debug CMakeFiles/RealLinear.cpp.dir/RealLinear/Tests/VectorTests.cpp.o CMakeFiles/RealLinear.cpp.dir/RealLinear/Vector/Vector.cpp.o CMakeFiles/RealLinear.cpp.dir/RealLinear/Errors/RealLinearErrors.cpp.o CMakeFiles/RealLinear.cpp.dir/main.cpp.o
+build libRealLinear.cpp.a: CXX_STATIC_LIBRARY_LINKER__RealLinear.2ecpp_Debug CMakeFiles/RealLinear.cpp.dir/RealLinear/Tests/VectorTests.cpp.o CMakeFiles/RealLinear.cpp.dir/RealLinear/Vector/Vector.cpp.o CMakeFiles/RealLinear.cpp.dir/RealLinear/Errors/RealLinearErrors.cpp.o CMakeFiles/RealLinear.cpp.dir/main.cpp.o CMakeFiles/RealLinear.cpp.dir/RealLinear/Matrix/Matrix.cpp.o
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/RealLinear.cpp.dir
@@ -105,6 +111,12 @@ build CMakeFiles/main.cpp.dir/main.cpp.o: CXX_COMPILER__main.2ecpp_unscanned_Deb
   OBJECT_DIR = CMakeFiles/main.cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/main.cpp.dir
 
+build CMakeFiles/main.cpp.dir/RealLinear/Matrix/Matrix.cpp.o: CXX_COMPILER__main.2ecpp_unscanned_Debug /Users/joshuacidron/Desktop/LinearAlgebra/RealLinear/Matrix/Matrix.cpp || cmake_object_order_depends_target_main.cpp
+  DEP_FILE = CMakeFiles/main.cpp.dir/RealLinear/Matrix/Matrix.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/main.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.cpp.dir/RealLinear/Matrix
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target main.cpp
@@ -113,7 +125,7 @@ build CMakeFiles/main.cpp.dir/main.cpp.o: CXX_COMPILER__main.2ecpp_unscanned_Deb
 #############################################
 # Link the executable main.cpp
 
-build main.cpp: CXX_EXECUTABLE_LINKER__main.2ecpp_Debug CMakeFiles/main.cpp.dir/main.cpp.o
+build main.cpp: CXX_EXECUTABLE_LINKER__main.2ecpp_Debug CMakeFiles/main.cpp.dir/main.cpp.o CMakeFiles/main.cpp.dir/RealLinear/Matrix/Matrix.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0
   OBJECT_DIR = CMakeFiles/main.cpp.dir
   POST_BUILD = :

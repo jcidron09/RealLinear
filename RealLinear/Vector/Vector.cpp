@@ -22,12 +22,20 @@ namespace RealLinear{
     }
 
     double& Vector::operator [](int index){
+        if (index > this->dimension) {
+            throw RealLinearException("VectorIndexOutOfBounds");
+        }
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         return elements[index];
     }
 
     bool Vector::operator == (Vector vector){
         if (this->dimension != vector.dimension)
             throw RealLinearException("VectorDimensionMatchError");
+        if (this->dimension == 0){
+            return true;
+        }
         for (int i = 0; i < this->elements.size(); i++){
             if (this->elements[i] != vector.elements[i]){
                 return false;
@@ -39,6 +47,8 @@ namespace RealLinear{
     Vector Vector::operator + (Vector vector){
         if (this->dimension != vector.dimension)
             throw RealLinearException("VectorDimensionMatchError");
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         auto* sum = new Vector(vector.dimension);
         for (int i = 0; i < this->dimension; i++){
             sum->elements[i] = this->elements[i] + vector.elements[i];
@@ -49,6 +59,8 @@ namespace RealLinear{
     Vector Vector::operator += (Vector vector) {
         if (this->dimension != vector.dimension)
             throw RealLinearException("VectorDimensionMatchError");
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         auto* sum = new Vector(vector.dimension);
         for (int i = 0; i < this->dimension; i++){
             sum->elements[i] = this->elements[i] + vector.elements[i];
@@ -57,6 +69,8 @@ namespace RealLinear{
     }
 
     Vector& Vector::operator * (double scalar) {
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         for (double& content : this->elements) {
             content *= scalar;
         }
@@ -64,6 +78,8 @@ namespace RealLinear{
     }
 
     Vector& Vector::operator *= (double scalar){
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         for (double& content : this->elements) {
             content *= scalar;
         }
@@ -71,6 +87,8 @@ namespace RealLinear{
     }
 
     double Vector::norm() {
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         double norm = 0.0;
         for (double element : this->elements){
             norm += std::pow(element, 2.0);
@@ -79,6 +97,8 @@ namespace RealLinear{
     }
 
     double Vector::norm (int n) {
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         double norm = 0.0;
         for (double element : this->elements){
             norm += std::pow(element, n);
@@ -87,6 +107,8 @@ namespace RealLinear{
     }
 
     double Vector::dot_product (Vector vector2) {
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         if (dimension != vector2.dimension)
             throw RealLinearException("VectorDimensionMatchError");
         double dot = 0.0;
@@ -97,6 +119,8 @@ namespace RealLinear{
     }
 
     double Vector::angle(Vector vector2) {
+        if (this->dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         if (dimension != vector2.dimension)
             throw RealLinearException("VectorDimensionMatchError");
         return acos(this->dot_product(vector2)/(this->norm()*vector2.norm()));
@@ -117,6 +141,8 @@ namespace RealLinear{
 
     double norm (Vector& vector){
         double norm = 0.0;
+        if (vector.dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         for (double element : vector.elements){
             norm += std::pow(element, 2.0);
         }
@@ -125,6 +151,8 @@ namespace RealLinear{
 
     double norm (Vector& vector, int n) {
         double norm = 0.0;
+        if (vector.dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         for (double element : vector.elements){
             norm += std::pow(element, n);
         }
@@ -134,6 +162,8 @@ namespace RealLinear{
     double dot_product (Vector& vector1, Vector& vector2){
         if (vector1.dimension != vector2.dimension)
             throw RealLinearException("VectorDimensionMatchError");
+        if (vector1.dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         double dot = 0.0;
         for (int i = 0; i < vector1.dimension; i++){
             dot += vector1[i] * vector2[i];
@@ -144,6 +174,8 @@ namespace RealLinear{
     double angle (Vector& vector1, Vector& vector2) {
         if (vector1.dimension != vector2.dimension)
             throw RealLinearException("VectorDimensionMatchError");
+        if (vector1.dimension == 0)
+            throw RealLinearException("ZeroDimensionalVector");
         return acos(vector1.dot_product(vector2)/(vector1.norm()*vector2.norm()));
     };
 
@@ -167,5 +199,4 @@ namespace RealLinear{
         }
         return vector1.elements[0]*vector2.elements[1] - vector1.elements[1]*vector2.elements[0];
     }
-
 };

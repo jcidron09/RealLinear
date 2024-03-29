@@ -15,6 +15,7 @@ class RealLinearException : public std::exception{
     public:
         RealLinearException(const std::string& error_type);
         [[nodiscard]] const char* what() const noexcept override {return error_text.c_str();};
+        std::string type();
 };
 
 

@@ -6,6 +6,7 @@
 #define LINEARALGEBRA_REALLINEAR_H
 
 #include <vector>
+#include <tuple>
 #include "Errors/RealLinearErrors.h"
 
 
@@ -40,6 +41,28 @@ class RealLinear::Vector {
         double dot_product(Vector vector2);
         double angle(Vector vector2);
         Vector cross_product(Vector vector2);
+};
+
+class RealLinear::Matrix {
+    public:
+        int rows;
+        int columns;
+        std::tuple<int, int> dimension;
+
+        std::vector<RealLinear::Vector> entries;
+        Matrix();
+        Matrix(int rows, int columns);
+        Matrix(std::tuple<int, int> dimension) : Matrix(std::get<0>(dimension), std::get<1>(dimension)) {};
+        Matrix(std::vector<RealLinear::Vector>& entries);
+
+        Vector& operator [](int index);
+        Matrix operator + (Matrix matrix);
+        Matrix operator += (Matrix matrix);
+        bool operator == (Matrix matrix);
+        Matrix& operator *= (double scalar);
+        Matrix& operator * (double scalar);
+
+
 };
 
 
