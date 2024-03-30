@@ -2,7 +2,7 @@
 // Created by Joshua Cidron on 3/25/24.
 //
 #include "../RealLinear.h"
-
+#include <iostream>
 namespace RealLinear{
     Vector::Vector() {
         Vector::elements = {};
@@ -22,7 +22,7 @@ namespace RealLinear{
     }
 
     double& Vector::operator [](int index){
-        if (index > this->dimension) {
+        if (this->dimension < index) {
             throw RealLinearException("VectorIndexOutOfBounds");
         }
         if (this->dimension == 0)
@@ -69,18 +69,19 @@ namespace RealLinear{
     }
 
     Vector& Vector::operator * (double scalar) {
+        auto* new_vector = new Vector(dimension);
         if (this->dimension == 0)
             throw RealLinearException("ZeroDimensionalVector");
-        for (double& content : this->elements) {
-            content *= scalar;
+        for (int i = 0; i < dimension; i++){
+            new_vector->elements[i] = this->elements[i]*2;
         }
-        return *this;
+        return *new_vector;
     }
 
     Vector& Vector::operator *= (double scalar){
         if (this->dimension == 0)
             throw RealLinearException("ZeroDimensionalVector");
-        for (double& content : this->elements) {
+        for (double content : this->elements) {
             content *= scalar;
         }
         return *this;
@@ -138,6 +139,14 @@ namespace RealLinear{
         return RealLinear::Vector({entry_1, entry_2, entry_3});
     }
 
+    std::string Vector::string() {
+        std::string toReturn = "{";
+        for (int i = 0; i < this->dimension-1; i++) {
+            toReturn.append(std::to_string(this->elements[i]) + ", ");
+        }
+        toReturn.append(std::to_string(this->elements[dimension-1]) + "}");
+        return toReturn;
+    }
 
     double norm (Vector& vector){
         double norm = 0.0;
@@ -198,5 +207,6 @@ namespace RealLinear{
             throw RealLinearException("CrossProduct2DDimensionError");
         }
         return vector1.elements[0]*vector2.elements[1] - vector1.elements[1]*vector2.elements[0];
-    }
+    };
+
 };

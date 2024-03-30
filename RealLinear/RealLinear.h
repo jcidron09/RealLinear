@@ -36,6 +36,7 @@ class RealLinear::Vector {
         Vector& operator *= (double scalar);
         Vector& operator * (double scalar);
 
+        std::string string();
         double norm ();
         double norm (int n);
         double dot_product(Vector vector2);
@@ -62,7 +63,13 @@ class RealLinear::Matrix {
         Matrix& operator *= (double scalar);
         Matrix& operator * (double scalar);
 
-
+        //getters
+        Vector row (int index);
+        Vector column (int index);
+        std::string string();
+        //actual methods
+        Vector operator * (Vector vector);
+        Matrix operator * (Matrix matrix);
 };
 
 

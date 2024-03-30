@@ -3,6 +3,8 @@
 //
 
 #include "../RealLinear.h"
+#include <iostream>
+
 
 namespace RealLinear {
     Matrix::Matrix() {
@@ -116,4 +118,50 @@ namespace RealLinear {
         return *this;
     }
 
+    Vector Matrix::operator *(Vector vector) {
+        if (this->columns != vector.dimension) {
+            throw RealLinearException("MatrixVectorDimensionError");
+        }
+        RealLinear::Vector product = Vector(this->rows);
+        int column = 0;
+        for (int entry = 0; entry < product.dimension; entry++) {
+            product[entry] = this->entries[column].dot_product(vector);
+            column++;
+        }
+        return product;
+    }
+
+    Vector Matrix::row (int index) {
+        return entries[index];
+    }
+
+    Vector Matrix::column (int index) {
+        Vector column(this->rows);
+        for (int i = 0; i < this->rows; i++) {
+            column[i] = this->entries[i][index];
+        }
+        return column;
+    }
+
+    Matrix Matrix::operator *(Matrix matrix) {
+        if (this->columns != matrix.rows) {
+            throw RealLinearException("MatrixVectorDimensionError");
+        }
+        RealLinear::Matrix product = Matrix(this->rows, matrix.columns);
+        for (int row = 0; row < product.rows; row++) {
+            for (int col = 0; col < product.columns; col++) {
+                product[row][col] = this->row(row).dot_product(matrix.column(col));
+            }
+        }
+        return product;
+    }
+
+    std::string Matrix::string () {
+        std::string string;
+        for (Vector row : this->entries) {
+            string.append(row.string());
+            string.append("\n");
+        }
+        return string;
+    }
 }
